@@ -1,0 +1,51 @@
+# English version.
+
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-22 12:24+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Impressum"
+msgstr "Impressum"
+
+msgid "Home"
+msgstr "Home"
+
+msgid "Specials"
+msgstr "Specials"
+
+msgid "Owner's Name"
+msgstr "Owner's Name"
+
+msgid "Address"
+msgstr "Address"
+
+msgid "Telephone"
+msgstr "Telephone"
+
+msgid "VAT Identification Number according to Section 27a of the German Value Added Tax Act"
+msgstr "VAT Identification Number according to Section 27a of the German Value Added Tax Act"
+
+msgid "Website created by"
+msgstr "Website created by"
+
+msgid "Business Registration number"
+msgstr "Business Registration number"
+
+msgid "Business Name"
+msgstr "Business Name"
+
+msgid "While supplies last."
+msgstr "While supplies last."
+
+msgid "Sorry, we don't have any specials at the moment."
+msgstr "Sorry, we don't have any specials at the moment."

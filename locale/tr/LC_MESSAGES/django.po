@@ -1,0 +1,51 @@
+# Turkish version.
+
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-22 12:24+0200\n"
+"PO-Revision-Date: 2024-05-22 10:00+0200\n"
+"Last-Translator: \n"
+"Language-Team: Turkish <tr@li.org>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Impressum"
+msgstr "Impressum"
+
+msgid "Home"
+msgstr "Ana Sayfa"
+
+msgid "Specials"
+msgstr "Kampanyalar"
+
+msgid "Owner's Name"
+msgstr "Sahibinin Adı"
+
+msgid "Address"
+msgstr "Adres"
+
+msgid "Telephone"
+msgstr "Telefon"
+
+msgid "VAT Identification Number according to Section 27a of the German Value Added Tax Act"
+msgstr "Alman Katma Değer Vergisi Yasası Bölüm 27a'ya göre KDV Kimlik Numarası"
+
+msgid "Website created by"
+msgstr "Web sitesi tasarımı"
+
+msgid "Business Registration number"
+msgstr "Ticari Sicil Numarası"
+
+msgid "Business Name"
+msgstr "İşletme Adı"
+
+msgid "While supplies last."
+msgstr "Stoklar tükenene kadar."
+
+msgid "Sorry, we don't have any specials at the moment."
+msgstr "Üzgünüz, şu anda herhangi bir kampanyamız bulunmamaktadır."

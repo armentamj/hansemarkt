@@ -1,0 +1,103 @@
+{% load static tailwind_tags i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+<!DOCTYPE html>
+<html class="h-full" lang="{{ LANGUAGE_CODE }}">
+<head>
+    <title>Türkischer Supermarkt Lübeck St. Lorenz Süd | Hansemarkt Özer</title>
+    <meta name="description" content="Ihr familiengeführter türkischer Lebensmittelmarkt in Lübeck (St. Lorenz Süd). Frisches Obst, Gemüse, Halal und orientalische Spezialitäten.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Open Graph / Facebook / WhatsApp / iMessage -->
+    <meta property="og:type" content="business.business">
+    <meta property="og:title" content=" Hansemarkt Özer | Türkischer Supermarkt Lübeck St. Lorenz Süd">
+    <meta property="og:description"
+        content="Ihr familiengeführter türkischer Lebensmittelmarkt in Lübeck. Frisches Halal-Fleisch, Obst, Gemüse & orientalische Spezialitäten.">
+    <meta property="og:url" content="https://yourdomain.de">
+    <meta property="og:image" content="https://yourdomain.de/static/images/socialmedia-preview.jpeg">
+    <meta property="og:locale" content="de_DE">
+    
+    <!-- Location Specific Open Graph Tags (Triggers Local Relevance) -->
+    <meta property="business:contact_data:street_address" content="Hansering 50">
+    <meta property="business:contact_data:locality" content="Lübeck">
+    <meta property="business:contact_data:postal_code" content="23558">
+    <meta property="business:contact_data:country_name" content="Germany">
+    
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Hansemarkt Özer | Türkischer Supermarkt Lübeck St. Lorenz Süd">
+    <meta name="twitter:description" content="Ihr familiengeführter türkischer Lebensmittelmarkt in Lübeck. Halal, Obst, Gemüse & orientalische Spezialitäten.">
+    <meta name="twitter:image" content="https://yourdomain.de/static/images/socialmedia-preview.jpeg">
+
+    {% tailwind_css %}
+</head>
+
+<body class="bg-gray-50 text-black leading-normal tracking-normal h-full relative pt-15 lg:pt-24">
+    <nav class="h-fit min-h-18 lg:h-20 w-full flex flex-col justify-between lg:flex-row lg:justify-between gap-3 items-center border-b pt-3 lg:pt-0 px-3 fixed bg-white top-0 right-0 w-full z-10">
+        <button aria-label="Toggle Menu" class="menubutton block lg:hidden h-12 w-15 focus:outline-none cursor-pointer absolute top-6 left-1">
+            <div class="menucontainer relative w-full h-full">
+                <p
+                    class="line-one h-0.5 rounded-sm bg-black Transform-GPU top-0 absolute right-1/2 translate-x-1/2 w-1/2 origin-center leading-none transition-all duration-300 transform">
+                </p>
+                <p
+                    class="line-two h-0.5 rounded-sm bg-black Transform-GPU top-3 absolute right-1/2 translate-x-1/2 w-1/2 leading-none transition-all duration-300">
+                </p>
+                <p
+                    class="line-three h-0.5 rounded-sm bg-black Transform-GPU top-6 absolute right-1/2 translate-x-1/2 w-1/2 origin-center block leading-none transition-all duration-300 transform">
+                </p>
+            </div>
+        </button>
+        <!-- Language Switcher Form -->
+        <form class="hidden lg:flex lg:flex-row flex-col firstmen justify-start lg:justify-between items-center lg:h-fit lg:w-fit gap-3" action="{% url 'set_language' %}" method="post">
+            {% csrf_token %}
+            <input name="next" type="hidden" value="{{ request.get_full_path }}">
+            <button class="transition-all duration-300 ease-in font-semibold text-sm lg:text-xl hover:text-white hover:bg-red-500 rounded-sm px-2 cursor-pointer" name="language" value="de" type="submit">Deutsch</button>
+            <button class="transition-all duration-300 ease-in font-semibold text-sm lg:text-xl hover:text-white hover:bg-red-500 rounded-sm px-2 cursor-pointer" name="language" value="en" type="submit">English</button>
+            <button class="transition-all duration-300 ease-in font-semibold text-sm lg:text-xl hover:text-white hover:bg-red-500 rounded-sm px-2 cursor-pointer" name="language" value="tr" type="submit">Türkçe</button>
+        </form>
+
+        <!-- Basic Navigation Links -->
+        <div class="hidden lg:flex lg:flex-row flex-col secondmen justify-start lg:justify-between items-center lg:h-fit lg:w-fit gap-3 pb-4 lg:pb-0">
+            <a class="transition-all duration-300 ease-in font-semibold text-sm lg:text-xl hover:text-white hover:bg-red-500 rounded-sm px-2" href="{% url 'index' %}">{% trans "Home" %}</a>
+            <a class="transition-all duration-300 ease-in font-semibold text-sm lg:text-xl hover:text-white hover:bg-red-500 rounded-sm px-2" href="{% url 'impressum' %}">{% trans "Impressum" %}</a>
+        </div>
+    </nav>
+    <main class="lg:container mx-auto shadow-xl border-t-2 border-gray-100 rounded min-h-[82vh] mt-4">
+        {% block content %}
+        <!-- This is like 'yield' in Rails -->
+        {% endblock %}
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.querySelector('.menubutton');
+
+            // Burger lines
+            const l1 = document.querySelector('.line-one');
+            const l2 = document.querySelector('.line-two');
+            const l3 = document.querySelector('.line-three');
+
+            // Menu containers
+            const firstMen = document.querySelector('.firstmen');
+            const secondMen = document.querySelector('.secondmen');
+
+            if (btn) {
+                btn.addEventListener('click', () => {
+                    // Animate burger to X and back
+                    l1.classList.toggle("rotate-45");
+                    l1.classList.toggle("translate-y-[12px]");
+                    l2.classList.toggle("opacity-0");
+                    l3.classList.toggle("-rotate-45");
+                    l3.classList.toggle("-translate-y-[12px]");
+
+                    // Toggle menus visibility
+                    // We use ?. just in case one menu isn't on the page (e.g. if user is logged out)
+                    firstMen?.classList.toggle("hidden");
+                    firstMen?.classList.toggle("flex");
+                    secondMen?.classList.toggle("hidden");
+                    secondMen?.classList.toggle("flex");
+                });
+            }
+        });
+    </script>
+</body>
+</html>
