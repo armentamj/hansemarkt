@@ -5,17 +5,17 @@
 {% block content %}
 <div class="bg-neutral-200 p-2 lg:p-6 min-h-[82vh] h-fit pb-20 lg:pb-8 relative">
     <h1 class="text-6xl mb-6 w-fit mx-auto">Impressum</h1>
-    <div class="flex flex-col justify-start items-center lg:flex-row justify-between">
-        <div class="flex flex-col justify-start items-start gap-5">
+    <div class="flex flex-col justify-start items-center md:flex-row justify-between">
+        <div class="flex flex-col justify-start items-start gap-5 w-[37vw]">
             <p class="lg:text-xl"><strong>{% trans "Owner's Name" %}</strong>: Hanse Momen</p>
             <p class="lg:text-xl"><strong>{% trans "Business Name" %}</strong>: Hansemarkt Özer</p>
-            <a href="https://google.com/search?q={{ 'Hansering 50, 23558 Lübeck'|urlencode }}" class="transition-all duration-300 ease-in lg:text-xl hover:text-white hover:bg-red-500 rounded-sm" target="_blank"><strong>{% trans "Address" %}</strong>: Hansering 50, 23558 Lübeck</a>
+            <a href="https://google.com/search?q={{ 'Hansering 50, 23558 Lübeck'|urlencode }}" class="transition-all duration-300 ease-in lg:text-xl hover:text-white hover:scale-[1.1] hover:bg-red-500 rounded-sm" target="_blank"><strong>{% trans "Address" %}</strong>: Hansering 50, 23558 Lübeck</a>
             <p class="lg:text-xl"><strong>{% trans "Telephone" %}</strong>: 0451 8132460</p>
-            <p class="lg:text-xl"><strong>{% trans "VAT Identification Number according to Section 27a of the German Value Added Tax Act" %}</strong>: IF32489573</p>
+            <p class="lg:text-xsl break-words"><strong>{% trans "VAT Identification Number according to Section 27a of the German Value Added Tax Act" %}</strong>: IF32489573</p>
             <P class="lg:text-xl"><strong>{% trans "Business Registration number" %}</strong>: AF56438U</P>
         </div>
         <div>
-            <img src="{% static 'images/hansemarktOzer.webp' %}" alt="Hansemarkt Özer Store Front" class="w-full h-auto rounded shadow-lg">
+            <img src="{% static 'images/hansemarktOzer.webp' %}" alt="Hansemarkt Özer Store Front" class="w-[37vw] h-auto rounded shadow-lg">
         </div>
     </div>
 

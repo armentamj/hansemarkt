@@ -19,6 +19,8 @@ from django.urls import path, include
 from django.conf import settings  # Import settings to access MEDIA_URL and MEDIA_ROOT
 from django.conf.urls.static import static  # Import static to help serve files
 from homepage.views import index, impressum
+from django.views.generic import RedirectView
+from django.templatetags.static import static as static_file
 
 urlpatterns = [
     path('admin/', admin.site.urls), # This is for the Admin Panel

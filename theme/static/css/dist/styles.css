@@ -305,6 +305,18 @@
   .w-15 {
     width: calc(var(--spacing) * 15);
   }
+  .w-45 {
+    width: calc(var(--spacing) * 45);
+  }
+  .w-\[37vw\] {
+    width: 37vw;
+  }
+  .w-\[40vw\] {
+    width: 40vw;
+  }
+  .w-\[45vw\] {
+    width: 45vw;
+  }
   .w-fit {
     width: fit-content;
   }
@@ -510,6 +522,9 @@
     --tw-tracking: var(--tracking-normal);
     letter-spacing: var(--tracking-normal);
   }
+  .break-words {
+    overflow-wrap: break-word;
+  }
   .text-black {
     color: var(--color-black);
   }
@@ -553,6 +568,20 @@
     --tw-ease: var(--ease-in);
     transition-timing-function: var(--ease-in);
   }
+  .hover\:scale-\[1\.1\] {
+    &:hover {
+      @media (hover: hover) {
+        scale: 1.1;
+      }
+    }
+  }
+  .hover\:scale-\[1\.2\] {
+    &:hover {
+      @media (hover: hover) {
+        scale: 1.2;
+      }
+    }
+  }
   .hover\:bg-red-500 {
     &:hover {
       @media (hover: hover) {
@@ -581,6 +610,11 @@
   .md\:grid-cols-3 {
     @media (width >= 48rem) {
       grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+  .md\:flex-row {
+    @media (width >= 48rem) {
+      flex-direction: row;
     }
   }
   .lg\:container {
